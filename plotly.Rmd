@@ -74,4 +74,28 @@ You can make more complicated plots - Google plotly R --> quick start examples, 
 
 Lots of cool examples; Lots of charts (Gantt Chart)
 
+## ggplotly
+
+People like this - make something in ggplot and then ggplotly to make it a plotly from a ggplot 
+
+```{r}
+gg_lat_long = 
+  nyc_airbnb %>% 
+  ggplot(aes(x = lat, y = long, color = price)) + 
+  geom_point()
+
+ggplotly(gg_lat_long)
+```
+
+## What kinds of stuff can you put in our dashbaords 
+
+Make the dashboard RMD - can look at extra links on the course website and you can see the underlying data from the website he has references 
+
+## WHY did we put the dashboard in a separate place (on the dashboard) 
+
+If it's in the normal folder, it renders to the normal website, which is a problem because it doesn't work as a dashboard. 
+
+How to fix this: 
+1) Build your website
+2) Command line version of this 
 
