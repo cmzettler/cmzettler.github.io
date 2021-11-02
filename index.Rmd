@@ -20,7 +20,7 @@ This is an about HTML file that's in the same repo.
 
 ## Here's Murphy 
 
-My brother's dog's name is Murphy. He's a good friend. Here he is: 
+JANE's dog (that sometimes Robbie gets to play with) named Murphy. He's a good friend. Here he is: 
 
 ![](images/murphy.jpeg)
 Example two with scaling: 
@@ -28,6 +28,20 @@ Example two with scaling:
 Sometimes Murph-a-durph is in pain, because he's had a procedure done: 
 
 <img src="images/painedmurph.jpeg" style="width:75%">
+
+## Murph over time
+
+Murph started off as a little guy
+
+<img src="images/babymurph.png" style="width:75%">
+
+And then grew up and now looks like an old man with a backbrace: 
+
+<img src="images/feeblemurph.jpeg" style="width:75%">
+
+BUT, He will be okay! 
+
+<img src="images/contentmurph.jpeg" style="width:75%">
 
 ## Created a new text file 
 
