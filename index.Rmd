@@ -25,7 +25,9 @@ My brother's dog's name is Murphy. He's a good friend. Here he is:
 ![](images/murphy.jpeg)
 Example two with scaling: 
 
-<img src="images/murphy.jpeg" style="width:75%">
+Sometimes Murph-a-durph is in pain, because he's had a procedure done: 
+
+<img src="images/painedmurph.jpeg" style="width:75%">
 
 ## Created a new text file 
 
@@ -47,3 +49,7 @@ When we first opened things, R didn't know we were making a website. Now, R sees
 Go to cmzettler.github.io and this will be public 
 
 Github tries to understand it's very best what you're doing 
+
+Can change themes with bootstrap 
+
+If you like something about a a website that looks like it's an R/ github website, go play around on github until you find the pieces that you're interested in and you can get it. 
