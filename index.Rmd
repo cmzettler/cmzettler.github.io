@@ -4,9 +4,46 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
-# This is Jeff's awesome website
+# This is Christie's awesome website
 
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+I can link to useful things like [google](https://www.google.com/) and [p8105](https://www.p8105.com/)
+
+Specify the full web address (copy and paste from website)
+
+I can make an extra page on my site and link to that. Here's my [about](about.html).
+
+This is an about HTML file that's in the same repo. 
+
+## Here's Murphy 
+
+My brother's dog's name is Murphy. He's a good friend. Here he is: 
+
+![](images/murphy.jpeg)
+Example two with scaling: 
+
+<img src="images/murphy.jpeg" style="width:75%">
+
+## Created a new text file 
+
+_site.yml - describes overall attributes of your website that's applied to every page of that site. 
+
+This is what puts in the navigation bar 
+Have to re-knit all pages to get navigation bar on all pages 
+
+Font Awesome - this is where you can get icons for additional navigation bars. 
+
+Can also skip a lot of this with the website template 
+
+## Now R knows we're building a website
+
+When we first opened things, R didn't know we were making a website. Now, R sees that we're doing that, so we quit and reopen R. Then look at Build tab - this picks up on the fact that we're building a website, so we can build it without re-knitting everything because now R knows to apply to all the individual pages. 
+
+## Making sure other people can access your website
+
+Go to cmzettler.github.io and this will be public 
+
+Github tries to understand it's very best what you're doing 
