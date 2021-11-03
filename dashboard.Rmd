@@ -1,5 +1,5 @@
 ---
-title: "Dashboard"
+title: "NYC Restaurant Inspections Dashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -16,16 +16,11 @@ library(plotly)
 
 
 ```{r}
-data("nyc_airbnb")
+data("rest_inspec")
 
-nyc_airbnb = 
-  nyc_airbnb %>% 
-  mutate(stars = review_scores_location / 2) %>% 
-  select(neighbourhood_group, neighbourhood, stars, price, room_type, lat, long) %>% 
-  filter(neighbourhood_group == "Manhattan", 
-         room_type == "Entire home/apt", 
-         price %in% 100:500) %>% 
-  drop_na(stars)
+rest_inspec = 
+  rest_inspec %>% 
+  filter(boro == "MANHATTAN", cuisine_description == "Italian", zipcode == 10014, grade != "Not Yet Graded") 
 ```
 
 
@@ -35,12 +30,13 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-nyc_airbnb %>% 
+rest_inspec %>% 
+  group_by(dba) %>% 
   mutate(
-    text_label = str_c("Price: $", price, "\nStars: ", stars)
+    text_label = str_c("Restaurant: ", dba, "\nStreet: ", street), grade = as.factor(grade), grade = fct_relevel(grade, "C", "B", "A")
   ) %>% 
   plot_ly(
-    x = ~lat, y = ~long, type = "scatter", mode = "markers", text = ~ text_label, color= ~price, alpha = 0.5
+    x = ~building, y = ~grade, type = "scatter", mode = "markers", text = ~ text_label, color= ~critical_flag, alpha = 0.5
   )
 ```
 
