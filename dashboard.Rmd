@@ -30,7 +30,7 @@ rest_inspec =
 Column {data-width=550}
 -----------------------------------------------------------------------
 
-### Distribution of Health Inspection Scores by Cuisince Type
+### Distribution of Health Inspection Scores by Cuisine Type
 
 ```{r}
 rest_inspec %>% 
@@ -65,7 +65,7 @@ rest_inspec %>%
   summarize(n_obs = n()) %>% 
   mutate(n_obs = ifelse(n_obs == "NA", 0, n_obs), text_label = str_c("Grade: ", grade, "\nNumber of Resraurants: ", n_obs)) %>% 
   plot_ly(x = ~inspection_month, y = ~n_obs, color = ~grade, type = "scatter", mode = "lines", text = ~text_label) %>%
-  layout(yaxis = list(title = 'Number of Italian, French, American, and Japanese Restaurants')) %>% 
-  layout(xaxis = list(title = 'Inspection Month'))
+  layout(yaxis = list(title = 'Number of Restaurants')) %>% 
+  layout(xaxis = list(title = 'Inspection Month', ticktext = list("Feb", "Apr", "Jun", "Aug", "Oct", "Dec"), tickvals=list("2", "4", "6", "8", "10", "12")))
 ```
 
