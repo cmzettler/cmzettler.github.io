@@ -27,24 +27,20 @@ rest_inspec =
 ```
 
 
-Column {data-width=650}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Chart A
 
 ```{r}
 rest_inspec %>% 
-  mutate(inspection_month = month(inspection_date)) %>% 
-  group_by(grade, inspection_month) %>% 
-  summarize(n_obs = n()) %>% 
-  mutate(n_obs = ifelse(n_obs == "NA", 0, n_obs), text_label = str_c("Grade: ", grade, "\nNumber of Resraurants: ", n_obs)) %>% 
-  plot_ly(x = ~inspection_month, y = ~n_obs, color = ~grade, type = "scatter", mode = "lines", text = ~text_label) %>%
-  layout(yaxis = list(title = 'Number of Italian, French, American, and Japanese Restaurants')) %>% 
-  layout(xaxis = list(title = 'Inspection Month'))
-
+  plot_ly(x = ~score, color = ~cuisine_description, type = "box") %>%
+  layout(yaxis = list(title = 'Cuisine Type')) %>% 
+  layout(xaxis = list(title = 'Health Inspection Score')) %>% 
+  layout(showlegend = FALSE)
 ```
 
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart B
@@ -63,6 +59,13 @@ rest_inspec %>%
 ### Chart C
 
 ```{r}
-
+rest_inspec %>% 
+  mutate(inspection_month = month(inspection_date)) %>% 
+  group_by(grade, inspection_month) %>% 
+  summarize(n_obs = n()) %>% 
+  mutate(n_obs = ifelse(n_obs == "NA", 0, n_obs), text_label = str_c("Grade: ", grade, "\nNumber of Resraurants: ", n_obs)) %>% 
+  plot_ly(x = ~inspection_month, y = ~n_obs, color = ~grade, type = "scatter", mode = "lines", text = ~text_label) %>%
+  layout(yaxis = list(title = 'Number of Italian, French, American, and Japanese Restaurants')) %>% 
+  layout(xaxis = list(title = 'Inspection Month'))
 ```
 
