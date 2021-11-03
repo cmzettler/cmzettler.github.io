@@ -1,0 +1,62 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## EDUCATION
+
+*   **Columbia University Mailman School of Public Health | Master of Public Health**
+
+    * Department: Epidemiology 
+    
+    * Concentration: Concentration in Comparative Effectiveness and Outcomes Research
+    
+    * New York, NY | May 2022
+
+*   **Vanderbilt University | Bachelor of Arts**
+
+    * Major: Medicine, Health, and Society 
+
+    * Minors: Chemistry, Corporate Strategy, and French
+
+    * Nashville, TN | May 2016
+
+## PROFESSIONAL EXPERIENCE 
+
+*   **Mailman School of Public Health (August 2021 – Present)**
+
+    * Quantitative Analysis Teaching Assistant – Department of Biostatistics 
+
+    * Research Assistant – Department of Health Policy and Management
+
+*   **Center for the Evaluation of Value and Risk in Health (CEVR), Tufts Medical Center (June 2021 – Present)**
+
+    * CEA Registry Reader 
+    
+    * Prior Role: Summer 2021 CEA Registry Fellow
+
+*   **Rabin Martin (August 2020 – June 2021)**
+
+    * Consultant 
+
+*   **TrialSpark (November 2018 – August 2020)**
+
+    * Manager, Network Operations 
+
+    * Prior roles: Senior Network Account Manager & Network Account Manager) 
+    
+*   **Rabin Martin (June 2016 – October 2018)**
+    
+    * Associate 
+
+    * Prior roles: Junior Associate 
+
+## SKILLS AND CERTIFICATIONS 
+
+**Software:** R, SAS, STATA, TreeAge, MS Office
+
+*Full resume available for download [here](static/resume.pdf).*
+

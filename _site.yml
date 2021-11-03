@@ -3,14 +3,14 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
-    - text: "Plotly"
-      href: plotly.html
+    - text: "Resume"
+      href: resume.html
     - text: "Dashboard"
       href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<christie.zettler@gmail.com>
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/christie-zettler-b8616a96/
     - icon: fa-github fa-lg
       href: http://github.com/cmzettler/
 output:
