@@ -12,6 +12,7 @@ library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
+library(lubridate)
 ```
 
 
@@ -20,8 +21,8 @@ data("rest_inspec")
 
 rest_inspec = 
   rest_inspec %>% 
-  filter(boro == "MANHATTAN", zipcode == 10014, grade != "Not Yet Graded", grade == c("A", "B", "C")) %>% 
-  mutate(grade = as.factor(grade), grade = fct_relevel(grade, "C", "B", "A"), cuisine_description = recode(cuisine_description, "Latin (Cuban, Dominican, Puerto Rican, South & Central American)" = "Latin"), cuisine_description = as.factor(cuisine_description))
+  filter(boro == "MANHATTAN", grade != "Not Yet Graded", grade == c("A", "B", "C"), cuisine_description == c("American", "French", "Italian", "Japanese")) %>% 
+  mutate(grade = as.factor(grade), grade = fct_relevel(grade, "C", "B", "A"), cuisine_description = as.factor(cuisine_description))
   
 ```
 
@@ -33,11 +34,13 @@ Column {data-width=650}
 
 ```{r}
 rest_inspec %>% 
-  group_by(cuisine_description, grade) %>% 
+  mutate(inspection_month = month(inspection_date)) %>% 
+  group_by(grade, inspection_month) %>% 
   summarize(n_obs = n()) %>% 
-  group_by(cuisine_description) %>% 
-  mutate(percent = round(100*n_obs/sum(n_obs), 2), cuisine_description = fct_reorder(cuisine_description, percent)) %>% 
-  plot_ly(x = ~cuisine_description, y = ~percent, type = "scatter", color = ~grade) 
+  mutate(n_obs = ifelse(n_obs == "NA", 0, n_obs), text_label = str_c("Grade: ", grade, "\nNumber of Resraurants: ", n_obs)) %>% 
+  plot_ly(x = ~inspection_month, y = ~n_obs, color = ~grade, type = "scatter", mode = "lines", text = ~text_label) %>%
+  layout(yaxis = list(title = 'Number of Italian, French, American, and Japanese Restaurants')) %>% 
+  layout(xaxis = list(title = 'Inspection Month'))
 
 ```
 
@@ -48,7 +51,6 @@ Column {data-width=350}
 
 ```{r}
 rest_inspec %>% 
-  filter(cuisine_description == c("American", "French", "Italian", "Japanese")) %>% 
   group_by(cuisine_description, grade) %>% 
   summarize(n_obs = n()) %>% 
   group_by(cuisine_description) %>% 
