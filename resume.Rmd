@@ -14,7 +14,7 @@ output:
     
     * Concentration: Concentration in Comparative Effectiveness and Outcomes Research
     
-    * New York, NY | May 2022
+    * New York, NY | Intended Graduation: May 2022
 
 *   **Vanderbilt University | Bachelor of Arts**
 
@@ -22,16 +22,16 @@ output:
 
     * Minors: Chemistry, Corporate Strategy, and French
 
-    * Nashville, TN | May 2016
+    * Nashville, TN | Graduated: May 2016
 
 ## PROFESSIONAL EXPERIENCE 
 
 *   **Mailman School of Public Health (August 2021 – Present)**
 
     * Quantitative Analysis Teaching Assistant – Department of Biostatistics 
-
+      
     * Research Assistant – Department of Health Policy and Management
-
+      
 *   **Center for the Evaluation of Value and Risk in Health (CEVR), Tufts Medical Center (June 2021 – Present)**
 
     * CEA Registry Reader 
@@ -58,5 +58,5 @@ output:
 
 **Software:** R, SAS, STATA, TreeAge, MS Office
 
-*Full resume available for download [here](static/resume.pdf).*
+*Additional detail provided in full resume available [here](static/resume.pdf).*
 

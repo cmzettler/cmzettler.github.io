@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-# Hi, I'm Christie 
+## Hi, I'm Christie 
 
 <img src="images/me.jpeg" style="width:75%">
 

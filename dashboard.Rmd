@@ -1,5 +1,5 @@
 ---
-title: "NYC Restaurant Inspections Dashboard"
+title: "NYC Inspections Dashboard - American, French, Italian, & Japanese Restaurants"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -30,7 +30,7 @@ rest_inspec =
 Column {data-width=550}
 -----------------------------------------------------------------------
 
-### Chart A
+### Distribution of Health Inspection Scores by Cuisince Type
 
 ```{r}
 rest_inspec %>% 
@@ -43,7 +43,7 @@ rest_inspec %>%
 Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Chart B
+### Number of A, B, and C ratings by Cuisine Type 
 
 ```{r}
 rest_inspec %>% 
@@ -56,7 +56,7 @@ rest_inspec %>%
   layout(xaxis = list(title = 'Cuisine Type'))
 ```
 
-### Chart C
+### Variability of A, B, and C ratings over month of year 
 
 ```{r}
 rest_inspec %>% 
