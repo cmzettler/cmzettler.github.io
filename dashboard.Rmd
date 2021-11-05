@@ -21,7 +21,7 @@ data("rest_inspec")
 
 rest_inspec = 
   rest_inspec %>% 
-  filter(boro == "MANHATTAN", grade != "Not Yet Graded", grade == c("A", "B", "C"), cuisine_description == c("American", "French", "Italian", "Japanese")) %>% 
+  filter(boro == "MANHATTAN", grade == c("A", "B", "C"), cuisine_description == c("American", "French", "Italian", "Japanese")) %>% 
   mutate(grade = as.factor(grade), grade = fct_relevel(grade, "C", "B", "A"), cuisine_description = as.factor(cuisine_description))
   
 ```
@@ -66,6 +66,6 @@ rest_inspec %>%
   mutate(n_obs = ifelse(n_obs == "NA", 0, n_obs), text_label = str_c("Grade: ", grade, "\nNumber of Resraurants: ", n_obs)) %>% 
   plot_ly(x = ~inspection_month, y = ~n_obs, color = ~grade, type = "scatter", mode = "lines", text = ~text_label) %>%
   layout(yaxis = list(title = 'Number of Restaurants')) %>% 
-  layout(xaxis = list(title = 'Inspection Month', ticktext = list("Feb", "Apr", "Jun", "Aug", "Oct", "Dec"), tickvals=list("2", "4", "6", "8", "10", "12")))
+  layout(xaxis = list(title = 'Inspection Month', ticktext = list("Feb", "Apr", "Jun", "Aug", "Oct", "Dec"), tickvals=list("2", "4", "6", "8", "10", "12"))) 
 ```
 
